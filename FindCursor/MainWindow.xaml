@@ -1,0 +1,18 @@
+﻿<Window x:Class="FindCursor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Find Cursor" Height="250" Width="400">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Text="Choose Modifier Keys:" Margin="0,0,0,10"/>
+            <CheckBox x:Name="CtrlCheckBox" Content="Control" />
+            <CheckBox x:Name="ShiftCheckBox" Content="Shift" />
+            <CheckBox x:Name="TabCheckBox" Content="Tab" />
+            <CheckBox x:Name="SpaceCheckBox" Content="Space" />
+            <TextBlock Margin="20,0,0,10"><Run Language="ja-jp" Text="任意のキーの組み合わせ"/><Run Text=":"/></TextBlock>
+            <Button Content="ボタンを押して特定のキーを保存する" Click="SelectKey_Click" Margin="0,0,10,0"/>
+            <TextBlock x:Name="SelectedKeyText" Text="No key selected" Margin="0,10,0,0"/>
+            <Button Content="キーをリセットする" Click="ClearSelectedKey_Click" Margin="0,10,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>
